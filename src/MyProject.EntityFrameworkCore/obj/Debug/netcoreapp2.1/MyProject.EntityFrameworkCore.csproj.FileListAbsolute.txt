@@ -1,0 +1,16 @@
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.dll.config
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.deps.json
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.runtimeconfig.json
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.runtimeconfig.dev.json
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.Core.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.Core.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.csprojAssemblyReference.cache
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.dll.config
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.csproj.CoreCompileInputs.cache
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.AssemblyInfoInputs.cache
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.AssemblyInfo.cs
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.csproj.CopyComplete
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.pdb

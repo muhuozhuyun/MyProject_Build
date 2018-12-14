@@ -1,0 +1,17 @@
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\bin\Debug\netcoreapp2.1\MyProject.Web.Core.deps.json
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\bin\Debug\netcoreapp2.1\MyProject.Web.Core.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\bin\Debug\netcoreapp2.1\MyProject.Web.Core.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\bin\Debug\netcoreapp2.1\MyProject.Application.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\bin\Debug\netcoreapp2.1\MyProject.Core.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\bin\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\bin\Debug\netcoreapp2.1\MyProject.Application.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\bin\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\bin\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.dll.config
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\bin\Debug\netcoreapp2.1\MyProject.Core.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\obj\Debug\netcoreapp2.1\MyProject.Web.Core.csprojAssemblyReference.cache
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\obj\Debug\netcoreapp2.1\MyProject.Web.Core.csproj.CoreCompileInputs.cache
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\obj\Debug\netcoreapp2.1\MyProject.Web.Core.AssemblyInfoInputs.cache
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\obj\Debug\netcoreapp2.1\MyProject.Web.Core.AssemblyInfo.cs
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\obj\Debug\netcoreapp2.1\MyProject.Web.Core.csproj.CopyComplete
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\obj\Debug\netcoreapp2.1\MyProject.Web.Core.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Core\obj\Debug\netcoreapp2.1\MyProject.Web.Core.pdb
