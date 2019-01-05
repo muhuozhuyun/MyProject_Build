@@ -57,3 +57,4 @@ E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\obj\Debug\netcor
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\obj\Debug\netcoreapp2.1\MyProject.Web.Mvc.csproj.CopyComplete
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\obj\Debug\netcoreapp2.1\MyProject.Web.Mvc.dll
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\obj\Debug\netcoreapp2.1\MyProject.Web.Mvc.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\obj\Debug\netcoreapp2.1\Razor\Views\MyFirst\Index.g.cshtml.cs

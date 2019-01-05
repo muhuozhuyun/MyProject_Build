@@ -29,6 +29,7 @@ namespace MyProject.EntityFrameworkCore
                     else
                     {
                         MyProjectDbContextConfigurer.Configure(options.DbContextOptions, options.ConnectionString);
+
                     }
                 });
             }

@@ -11,5 +11,5 @@ namespace MyProject.Web.Controllers
         {
             return View();
         }
-	}
+    }
 }

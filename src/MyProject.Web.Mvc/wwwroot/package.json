@@ -13,5 +13,16 @@
   "bugs": {
     "url": "https://github.com/gurayyarar/AdminBSBMaterialDesign/issues"
   },
-  "homepage": "https://github.com/gurayyarar/AdminBSBMaterialDesign#readme"
+  "homepage": "https://github.com/gurayyarar/AdminBSBMaterialDesign#readme",
+  "dependencies": {
+    "vue": "^2.5.21"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.0"
+  },
+  "derectories": {
+    "lib": "lib"
+  }
 }

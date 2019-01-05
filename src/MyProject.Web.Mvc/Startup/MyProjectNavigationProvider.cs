@@ -52,6 +52,13 @@ namespace MyProject.Web.Startup
                         url: "About",
                         icon: "info"
                     )
+                ).AddItem(
+                    new MenuItemDefinition(
+                        PageNames.MyFirst,
+                        L("MyFirst"),
+                        url: "MyFirst",
+                        icon: "info"
+                    )
                 ).AddItem( // Menu items below is just for demonstration!
                     new MenuItemDefinition(
                         "MultiLevelMenu",

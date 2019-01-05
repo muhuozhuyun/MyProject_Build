@@ -1,0 +1,20 @@
+﻿@section styles{
+
+}
+@section scripts
+    {
+<environment names="Development">
+  
+    <script src="~/view-resources/Views/MyFirst/index.js"></script>
+</environment>
+    <environment names="Staging,Production"></environment>
+}
+<div class="row clearfix" id="app">
+    <div class="header">
+        <p>I'm here</p>
+        <p>{{a}}</p>
+        <input v-model="a"/>
+    </div>
+    <div class="body"></div>
+    <div class="footer"></div>
+</div>

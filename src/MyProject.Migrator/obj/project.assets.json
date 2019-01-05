@@ -9220,6 +9220,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "\\\\192.168.16.250\\package": {},
         "http://nuget.newguid.cn/nuget/": {},
         "https://api.nuget.org/v3/index.json": {}
       },
