@@ -3,6 +3,7 @@ using Abp.Reflection.Extensions;
 using Abp.Timing;
 using Abp.Zero;
 using Abp.Zero.Configuration;
+using MyProject.Authorization;
 using MyProject.Authorization.Roles;
 using MyProject.Authorization.Users;
 using MyProject.Configuration;
@@ -23,6 +24,8 @@ namespace MyProject
             Configuration.Modules.Zero().EntityTypes.Tenant = typeof(Tenant);
             Configuration.Modules.Zero().EntityTypes.Role = typeof(Role);
             Configuration.Modules.Zero().EntityTypes.User = typeof(User);
+
+            Configuration.Authorization.Providers.Add<UserInfoAuthorizationProvider>();
 
             MyProjectLocalizationConfigurer.Configure(Configuration.Localization);
 

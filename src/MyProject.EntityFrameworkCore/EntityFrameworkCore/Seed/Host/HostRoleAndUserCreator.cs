@@ -51,6 +51,9 @@ namespace MyProject.EntityFrameworkCore.Seed.Host
                             !grantedPermissions.Contains(p.Name))
                 .ToList();
 
+            var UserInfoAuthorization = PermissionFinder.GetAllPermissions(new UserInfoAuthorizationProvider()).ToList();
+            permissions.AddRange(UserInfoAuthorization);
+
             if (permissions.Any())
             {
                 _context.Permissions.AddRange(

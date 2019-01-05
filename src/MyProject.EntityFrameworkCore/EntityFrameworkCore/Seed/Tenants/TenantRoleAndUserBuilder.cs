@@ -41,7 +41,7 @@ namespace MyProject.EntityFrameworkCore.Seed.Tenants
 
             // Grant all permissions to admin role
 
-            var grantedPermissions = _context.Permissions.IgnoreQueryFilters()
+            var grantedPermissions = _context.Permissions.IgnoreQueryFilters() 
                 .OfType<RolePermissionSetting>()
                 .Where(p => p.TenantId == _tenantId && p.RoleId == adminRole.Id)
                 .Select(p => p.Name)
@@ -52,6 +52,9 @@ namespace MyProject.EntityFrameworkCore.Seed.Tenants
                 .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Tenant) &&
                             !grantedPermissions.Contains(p.Name))
                 .ToList();
+
+            var UserInfoAuthorization = PermissionFinder.GetAllPermissions(new UserInfoAuthorizationProvider()).ToList();
+            permissions.AddRange(UserInfoAuthorization);
 
             if (permissions.Any())
             {
