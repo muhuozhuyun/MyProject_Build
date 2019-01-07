@@ -15,7 +15,8 @@
   },
   "homepage": "https://github.com/gurayyarar/AdminBSBMaterialDesign#readme",
   "dependencies": {
-    "vue": "^2.5.21"
+    "vue": "^2.5.21",
+    "vue-cli": "^2.9.6"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

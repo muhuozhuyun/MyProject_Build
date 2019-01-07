@@ -19,7 +19,10 @@
 			deleteRole(roleId, roleName);
 		});
 
-		$('.edit-role').click(function (e) {
+        $('.edit-role').click(function (e) {
+            var kkk = abp.auth.isGranted('PermissionNames.Pages_UserInfos_Update');
+            if (kkk) { console.dir("这个权限ok") }
+            else { console.dir("这个权限,看看") }
 			var roleId = $(this).attr("data-role-id");
 
 			e.preventDefault();

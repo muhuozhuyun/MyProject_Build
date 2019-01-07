@@ -29,7 +29,7 @@ namespace MyProject.Roles
             _roleManager = roleManager;
             _userManager = userManager;
         }
-
+        [AbpAuthorize(PermissionNames.Pages_UserInfos_Create)]
         public override async Task<RoleDto> Create(CreateRoleDto input)
         {
             CheckCreatePermission();
@@ -64,6 +64,11 @@ namespace MyProject.Roles
 
         public override async Task<RoleDto> Update(RoleDto input)
         {
+            bool roleInfos = PermissionChecker.IsGranted(PermissionNames.Pages_UserInfos_Update);
+            if (!roleInfos)
+            {
+                throw new AbpAuthorizationException("没有权限！");
+            }
             CheckUpdatePermission();
 
             var role = await _roleManager.GetRoleByIdAsync(input.Id);
