@@ -10,3 +10,7 @@ E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Application\obj\Debug\ne
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Application\obj\Debug\netcoreapp2.1\MyProject.Application.csproj.CopyComplete
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Application\obj\Debug\netcoreapp2.1\MyProject.Application.dll
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Application\obj\Debug\netcoreapp2.1\MyProject.Application.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Application\bin\Debug\netcoreapp2.1\MyProject.Application.xml
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Application\bin\Debug\netcoreapp2.1\MyProject.Common.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Application\bin\Debug\netcoreapp2.1\MyProject.Common.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Application\bin\Debug\netcoreapp2.1\MyProject.Common.xml

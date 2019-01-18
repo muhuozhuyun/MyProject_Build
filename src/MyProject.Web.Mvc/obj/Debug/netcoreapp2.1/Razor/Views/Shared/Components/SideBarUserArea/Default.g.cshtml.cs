@@ -57,7 +57,7 @@ using MyProject.Web.Views.Shared.Components.SideBarUserArea;
             WriteLiteral("<div class=\"user-info\">\n    <div class=\"image\">\n        ");
             EndContext();
             BeginContext(149, 65, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "ba5f5809b9d241ad9edd23bead431a76", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7af97c73e31c453fa351fd21a7f4c60c", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();

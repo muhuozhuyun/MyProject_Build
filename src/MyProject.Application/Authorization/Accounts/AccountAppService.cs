@@ -15,7 +15,11 @@ namespace MyProject.Authorization.Accounts
         {
             _userRegistrationManager = userRegistrationManager;
         }
-
+        /// <summary>
+        /// ×â¿Í
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public async Task<IsTenantAvailableOutput> IsTenantAvailable(IsTenantAvailableInput input)
         {
             var tenant = await TenantManager.FindByTenancyNameAsync(input.TenancyName);
@@ -31,7 +35,11 @@ namespace MyProject.Authorization.Accounts
 
             return new IsTenantAvailableOutput(TenantAvailabilityState.Available, tenant.Id);
         }
-
+        /// <summary>
+        /// ×¢²á
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public async Task<RegisterOutput> Register(RegisterInput input)
         {
             var user = await _userRegistrationManager.RegisterAsync(

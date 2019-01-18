@@ -58,3 +58,9 @@ E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\obj\Debug\netcor
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\obj\Debug\netcoreapp2.1\MyProject.Web.Mvc.dll
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\obj\Debug\netcoreapp2.1\MyProject.Web.Mvc.pdb
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\obj\Debug\netcoreapp2.1\Razor\Views\MyFirst\Index.g.cshtml.cs
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\bin\Debug\netcoreapp2.1\MyProject.Common.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\bin\Debug\netcoreapp2.1\MyProject.Common.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\bin\Debug\netcoreapp2.1\MyProject.Web.Mvc.xml
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\bin\Debug\netcoreapp2.1\MyProject.Common.xml
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\bin\Debug\netcoreapp2.1\MyProject.Web.Core.xml
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\bin\Debug\netcoreapp2.1\MyProject.Application.xml

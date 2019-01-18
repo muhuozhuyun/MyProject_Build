@@ -16,9 +16,13 @@ using MyProject.Authorization.Roles;
 using MyProject.Authorization.Users;
 using MyProject.Roles.Dto;
 using MyProject.Users.Dto;
+using MyProject.Common;
+using MyProject.Common.Attributes;
+
 
 namespace MyProject.Users
 {
+    [ApiDocument(GroupName = Common.MyProjectConsts.ApiGroup_User)]
     [AbpAuthorize(PermissionNames.Pages_Users)]
     public class UserAppService : AsyncCrudAppService<User, UserDto, long, PagedResultRequestDto, CreateUserDto, UserDto>, IUserAppService
     {
@@ -40,6 +44,11 @@ namespace MyProject.Users
             _roleRepository = roleRepository;
             _passwordHasher = passwordHasher;
         }
+        /// <summary>
+        /// 创建用户
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
 
         public override async Task<UserDto> Create(CreateUserDto input)
         {
@@ -63,7 +72,11 @@ namespace MyProject.Users
 
             return MapToEntityDto(user);
         }
-
+        /// <summary>
+        /// 更新用户
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public override async Task<UserDto> Update(UserDto input)
         {
             CheckUpdatePermission();
