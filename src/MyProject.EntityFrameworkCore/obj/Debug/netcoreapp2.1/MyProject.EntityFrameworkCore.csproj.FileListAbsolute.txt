@@ -14,3 +14,6 @@ E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.csproj.CopyComplete
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.dll
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\obj\Debug\netcoreapp2.1\MyProject.EntityFrameworkCore.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.Common.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.Common.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.EntityFrameworkCore\bin\Debug\netcoreapp2.1\MyProject.Common.xml

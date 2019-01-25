@@ -7,3 +7,8 @@ E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Core\obj\Debug\netcoreap
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Core\obj\Debug\netcoreapp2.1\MyProject.Core.AssemblyInfo.cs
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Core\obj\Debug\netcoreapp2.1\MyProject.Core.dll
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Core\obj\Debug\netcoreapp2.1\MyProject.Core.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Core\bin\Debug\netcoreapp2.1\MyProject.Common.dll
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Core\bin\Debug\netcoreapp2.1\MyProject.Common.pdb
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Core\bin\Debug\netcoreapp2.1\MyProject.Common.xml
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Core\obj\Debug\netcoreapp2.1\MyProject.Core.csprojAssemblyReference.cache
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Core\obj\Debug\netcoreapp2.1\MyProject.Core.csproj.CopyComplete
