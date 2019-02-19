@@ -64,3 +64,4 @@ E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\bin\Debug\netcor
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\bin\Debug\netcoreapp2.1\MyProject.Common.xml
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\bin\Debug\netcoreapp2.1\MyProject.Web.Core.xml
 E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\bin\Debug\netcoreapp2.1\MyProject.Application.xml
+E:\Demo\MyProject_Build\4.2.1\aspnet-core\src\MyProject.Web.Mvc\obj\Debug\netcoreapp2.1\Razor\Views\Home\Dashboard.g.cshtml.cs

@@ -13,6 +13,9 @@
     <Compile Remove="Migrations\20190105070313_seedpermission.cs" />
     <Compile Remove="Migrations\20190105074648_PermissionsData.cs" />
     <Compile Remove="Migrations\20190125064550_products.cs" />
+    <Compile Remove="Migrations\20190215064328_permissions.cs" />
+    <Compile Remove="Migrations\20190215065830_permissions.cs" />
+    <Compile Remove="Migrations\20190215070515_permissionsetting.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />

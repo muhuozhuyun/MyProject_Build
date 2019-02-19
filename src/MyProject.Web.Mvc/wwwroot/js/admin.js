@@ -463,3 +463,50 @@ $(function () {
 
     setTimeout(function () { $('.page-loader-wrapper').fadeOut(); }, 50);
 });
+
+function changeFrameHeight() {
+    var ifm = document.getElementById("iframepage");
+    iframeAutoFit(ifm);
+}
+
+function iframeAutoFit(iframeObj) {
+
+    if (!iframeObj) return;
+    var height = 0;
+    var height = ($(window).height() - ($('.legal').outerHeight() + $(".sub-menu").outerHeight() + $('.navbar').outerHeight()));
+    iframeObj.height = height;
+    try {
+        if (iframeObj && iframeObj.contentWindow && iframeObj.contentWindow.setHeight) {
+            iframeObj.contentWindow.setHeight(height);
+        }
+    } catch (e) {
+        return;
+    }
+
+
+    //如果子页面跳转到登录页，父页面重新刷新。
+    loginForm = iframeObj.contentWindow.document.getElementById("LoginForm");
+    if (loginForm) {
+        location.reload();
+    }
+    //if (iframeObj.Document) {
+    //    height = iframeObj.Document.body.scrollHeight
+    //}
+    //else if (iframeObj.contentDocument.body) {
+    //    height = iframeObj.contentDocument.body.offsetHeight;
+    //}
+
+    //iframeObj.height = height < 500 ? 500 : height;
+}
+
+function setMainFrameSrc(url) {
+    if (!url) {
+        return;
+    }
+    var ifm = document.getElementById("iframepage");
+    ifm.src = url;
+}
+
+function setParentMainFrameSrc(url) {
+    parent.setMainFrameSrc(url);
+}

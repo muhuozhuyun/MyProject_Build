@@ -37,6 +37,9 @@
         <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" asp-append-version="true" />
         <link href="~/lib/bootstrap-select/dist/css/bootstrap-select.css" rel="stylesheet" asp-append-version="true" />
         <link href="~/lib/toastr/toastr.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/jquery-ui/themes/base/core.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/jquery-ui/themes/base/resizable.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/lib/jquery.fancytree/dist/skin-win7/ui.fancytree.css" rel="stylesheet" asp-append-version="true" />
         <link href="~/lib/famfamfam-flags/dist/sprite/famfamfam-flags.css" rel="stylesheet" asp-append-version="true" />
         <link href="~/lib/font-awesome/css/font-awesome.css" rel="stylesheet" asp-append-version="true" />
         <link href="~/lib/Waves/dist/waves.css" rel="stylesheet" asp-append-version="true" />
@@ -58,97 +61,132 @@
     </script>
 </head>
 <body class="@("theme-" + uiTheme)">
-    <!-- Page Loader -->
-    <div class="page-loader-wrapper">
-        <div class="loader">
-            <div class="preloader">
-                <div class="spinner-layer pl-red">
-                    <div class="circle-clipper left">
-                        <div class="circle"></div>
-                    </div>
-                    <div class="circle-clipper right">
-                        <div class="circle"></div>
-                    </div>
-                </div>
-            </div>
-            <p>@L("PleaseWait")</p>
-        </div>
-    </div>
-    <!-- #END# Page Loader -->
-    <!-- Overlay For Sidebars -->
-    <div class="overlay"></div>
-    <!-- #END# Overlay For Sidebars -->
-    <!-- Search Bar -->
-    <div class="search-bar">
-        <div class="search-icon">
-            <i class="material-icons">search</i>
-        </div>
-        <input type="text" placeholder="@L("StartTyping")...">
-        <div class="close-search">
-            <i class="material-icons">close</i>
-        </div>
-    </div>
-    <!-- #END# Search Bar -->
-    <!-- Top Bar -->
-    <nav class="navbar">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
-                <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" asp-controller="Home" asp-action="Index"><i class="fa fa-cubes"></i> MyProject</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <!-- Call Search -->
-                    <li><a href="javascript:void(0);" class="js-search" data-close="true"><i class="material-icons">search</i></a></li>
-                    <!-- #END# Call Search -->
-                    @await Component.InvokeAsync(typeof(TopBarLanguageSwitchViewComponent))
-                    <li class="pull-right"><a href="javascript:void(0);" class="js-right-sidebar" data-close="true"><i class="material-icons">more_vert</i></a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- #Top Bar -->
-    <section>
-        <aside id="leftsidebar" class="sidebar">
-            @await Component.InvokeAsync(typeof(SideBarUserAreaViewComponent))
-            @await Component.InvokeAsync(typeof(SideBarNavViewComponent), new { activeMenu = ViewBag.CurrentPageName })
-            <!-- Footer -->
-            <div class="legal">
-                <div class="copyright">
-                    &copy; @DateTime.Now.Year <a href="javascript:void(0);">MyProject</a>.
-                </div>
-                <div class="version">
-                    <b>@L("Version") </b> @AppVersionHelper.Version [@AppVersionHelper.ReleaseDate.ToString("yyyyMMdd")]
-                </div>
-            </div>
-            <!-- #Footer -->
-        </aside>
-        @await Component.InvokeAsync(typeof(RightSideBarViewComponent))
-    </section>
-    <section class="content">
-        <div class="container-fluid">
-            @if (AlertManager.Alerts.Any())
-            {
-                <div id="AbpPageAlerts">
-                    @foreach (var alertMessage in AlertManager.Alerts)
-                    {
-                        <div class="alert alert-@alertMessage.Type.ToString().ToLower() @(alertMessage.Dismissible ? "alert-dismisable" : "")" role="alert">
-                            <h4 class="alert-heading">
-                                @alertMessage.Title
-                                @if (alertMessage.Dismissible)
-                                {
-                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                }
-                            </h4>
-                            <p>@alertMessage.Text</p>
+    <div id="app">
+        <!-- Page Loader -->
+        <div class="page-loader-wrapper">
+            <div class="loader">
+                <div class="preloader">
+                    <div class="spinner-layer pl-red">
+                        <div class="circle-clipper left">
+                            <div class="circle"></div>
                         </div>
-                    }
+                        <div class="circle-clipper right">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
                 </div>
-            }
-            @RenderBody()
+                <p>@L("PleaseWait")</p>
+            </div>
         </div>
-    </section>
+        <!-- Overlay For Sidebars -->
+        <div class="overlay"></div>
+        @*<div id="mainApp">
+                <div id="iFrameTree" class="panel">
+                    <div id="mainTreeHeader" class="panel-heading" style="display:none;">
+                    </div>
+                    <div class="panel-body" style="border-top:none;">@RenderSection("tree", required: false)</div>
+                </div>
+                <div id="iFrameBody" class="panel">
+                    <div class="panel-heading" style="display:none;"></div>
+                    <div class="panel-body" style="border-top:none;">@RenderBody()</div>
+                </div>
+            </div>*@
+
+        <!-- #END# Page Loader -->
+        <!-- #END# Overlay For Sidebars -->
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <div class="search-icon">
+                <i class="material-icons">search</i>
+            </div>
+            <input type="text" placeholder="@L("StartTyping")...">
+            <div class="close-search">
+                <i class="material-icons">close</i>
+            </div>
+        </div>
+        <!-- #END# Search Bar -->
+        <!-- Top Bar -->
+        <div class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collase" aria-expanded="false"></a>
+                    <a href="javascript:void(0);" class="bars"></a>
+                    <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                        <div class="logo" style="display:inline-block;margin-top:15px;">
+                            <b class="brand">我的项目&reg;</b>
+                        </div>
+                        <span id="ProjectName">@L("ProjectName")</span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse main-nav" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="pull-right dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user-circle-o"></i>
+                            </a>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="@Url.Action("Logout","Account")"><i class="fa fa-sign-out"></i></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <section class="sub-menu">
+            <ul class="nav nav-pills">
+                <li v-for="menu in subMenues" role="presentation" :class="{active:selectedSubMenu==menu}"><a href="#" v-on:click.prevent="selectSubMenu(menu)"><i v-bind:class="menu.icon"></i>{{menu.name}}</a></li>
+            </ul>
+        </section>
+        <!-- #Top Bar -->
+        <section>
+            <aside id="leftsidebar" class="sidebar">
+                @*@await Component.InvokeAsync(typeof(SideBarUserAreaViewComponent))*@
+                @*@await Component.InvokeAsync(typeof(SideBarNavViewComponent), new { activeMenu = ViewBag.CurrentPageName })*@
+                <div class="menu">
+                    <ul class="list">
+                        <li>
+                            <a>
+                                <i class="icon-emoticon_smile"></i>
+                                <span>您好 , @User.Identity.Name</span>
+                            </a>
+                        </li>
+                        <li v-for="menuItem in menues">
+                            <a v-if="menuItem.children.length==0" href="javascript:void(0)" v-on:click.prevent="selectMainMenu(menuItem)">
+                                <i v-if="menuItem.icon" v-bind:class="menuItem.icon"></i>
+                                <span>{{menuItem.name}}</span>
+                            </a>
+
+                            <a v-if="menuItem.children.length>0" href="javascript:void(0);" class="menu-toggle">
+                                <i v-if="menuItem.icon" v-bind:class="menuItem.icon"></i>
+                                <span>{{menuItem.name}}</span>
+                            </a>
+                            <ul v-if="menuItem.children.length>0" class="ml-menu">
+                                <li v-for="subMenuItem in menuItem.children">
+                                    <a v-if="subMenuItem.children" href="javascript:void(0)" v-on:click.prevent="selectSecondMainMenu(subMenuItem)">
+                                        <i v-if="subMenuItem.icon" v-bind:class="subMenuItem.icon"></i>
+                                        <span>{{subMenuItem.name}}</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            @*@await Component.InvokeAsync(typeof(RightSideBarViewComponent))*@
+        </section>
+
+        <section class="content">
+            <iframe id="iframepage" style="display:block;" src="/Home/Dashboard" border=0 frameBorder=0 framespacing=0 scrolling=no width="100%" height="100%" onload="changeFrameHeight()"></iframe>
+            @RenderBody()
+        </section>
+
+        <section class="legal">
+            <div class="m-t-5">
+                <span>&copy; @DateTime.Now.Year <a href="javascript:void(0);" id="legalName" 我的工程项目管理系统</a>.</span>
+                <span><b>Version </b> @AppVersionHelper.Version [@AppVersionHelper.ReleaseDate.ToString("yyyyMMdd")]</span>
+            </div>
+        </section>
+    </div>
     <environment names="Development">
         <script src="~/lib/json2/json2.js" asp-append-version="true"></script>
         <script src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
@@ -174,6 +212,8 @@
         <script src="~/js/main.js" asp-append-version="true"></script>
         <script src="~/view-resources/Views/Shared/_Layout.js" asp-append-version="true"></script>
         <script src="~/lib/vue/dist/vue.js" asp-append-version="true"></script>
+        <script src="~/js/zq.js" asp-append-version="true"></script>
+        <script src="~/js/iframe_main.js" asp-append-version="true"></script>
         @if (CultureInfo.CurrentUICulture.Name != "en")
         {
             <script src="~/lib/jquery-validation/src/localization/messages_@Html.Raw(CultureInfo.CurrentUICulture.Name.Replace("-", "_") + ".js")" asp-append-version="true"></script>
@@ -189,8 +229,51 @@
     <!-- Dynamic scripts of ABP system (They are created on runtime and can not be bundled) -->
     <script src="~/AbpServiceProxies/GetAll?v=@(AppTimes.StartupTime.Ticks)" type="text/javascript"></script>
     <script src="~/AbpScripts/GetScripts?v=@(AppTimes.StartupTime.Ticks)" type="text/javascript"></script>
-    <script src="~/lib/signalr-client/signalr.min.js" asp-append-version="true"></script>
-    <script src="~/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.signalr-client.js" asp-append-version="true"></script>
+    @*<script type="text/javascript">
+            $zq.settings = $zq.settings || {};
+            var previousHeight = 0;
+            var previousTreeHeight = 0;
+            function setHeight(height) {
+                if (height != previousHeight) {
+                    previousHeight = height;
+                    $("#iFrameBody").height(height);
+                }
+
+                var $treeContainer = $("iFrameTree").find("ul.fancytree-container");
+                if (height != previousTreeHeight && $treeContainer.length > 0) {
+                    previousTreeHeight = height;
+                    $treeContainer.height(height - 40);
+                }
+            }
+            function resetWidth() {
+                var bodyWidth = $(window).width() - $('#iFrameTree').width() - 2;
+                $("#iFrameBody").width(bodyWidth);
+            }
+
+            function setMainTreeTittle(title) {
+                $("#mainTreeHeader").show().text(title);
+                $("#iFrameTree").addClass("with-header");
+            }
+
+            $(function () {
+                if ($("#iFrameTree .panel-body").children().length == 0) {
+                    $("#iFrameTree").remove();
+                }
+                else {
+                    $('#iFrameTree').resizable({
+                        handles: 'e',
+                        minWidth: 100,
+                        maxWidth: 400,
+                        resize: resetWidth
+                    })
+                }
+
+                window.setInterval(resetWidth, 200);
+            })
+        </script>*@
+    <script src="~/js/submenu.js" asp-append-version="true"></script>
+    @*<script src="~/lib/signalr-client/signalr.min.js" asp-append-version="true"></script>
+        <script src="~/lib/abp-web-resources/Abp/Framework/scripts/libs/abp.signalr-client.js" asp-append-version="true"></script>*@
     @WebResourceManager.RenderScripts()
     <!-- View specific scripts -->
     @RenderSection("scripts", required: false)

@@ -4,6 +4,7 @@ using MyProject.Authorization.Roles;
 using MyProject.Authorization.Users;
 using MyProject.MultiTenancy;
 using MyProject.Products;
+using Abp.Authorization;
 
 namespace MyProject.EntityFrameworkCore
 {
@@ -16,5 +17,7 @@ namespace MyProject.EntityFrameworkCore
         {
         }
         public DbSet<Product> Products { get; set; } //产品
+        public DbSet<Authorization.Permissions.Permission> Permission { get; set; }
+        public DbSet<Authorization.Permissions.PermissionSetting> PermissionSettings { get; set; }
     }
 }

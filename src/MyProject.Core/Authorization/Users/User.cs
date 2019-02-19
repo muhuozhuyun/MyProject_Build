@@ -1,16 +1,23 @@
 ﻿using System;
 using Abp.Authorization.Users;
 using Abp.Extensions;
+using MyProject.Common.Projects;
 
 namespace MyProject.Authorization.Users
 {
-    public class User : AbpUser<User>
+    public class User : AbpUser<User>, IMustHaveProject
     {
+        public int? ProjectId { get; set; }
+
         public const string DefaultPassword = "123qwe";
 
         public static string CreateRandomPassword()
         {
             return Guid.NewGuid().ToString("N").Truncate(16);
+        }
+        public bool IsSystemAdmin()
+        {
+            return Name.ToUpper() == "ADMIN";
         }
 
         public static User CreateTenantAdminUser(int tenantId, string emailAddress)

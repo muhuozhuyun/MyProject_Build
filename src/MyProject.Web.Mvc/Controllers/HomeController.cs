@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Abp.AspNetCore.Mvc.Authorization;
 using MyProject.Controllers;
+using Abp.Web.Models;
 
 namespace MyProject.Web.Controllers
 {
@@ -11,5 +12,10 @@ namespace MyProject.Web.Controllers
         {
             return View();
         }
-	}
+        public ActionResult Dashboard()
+        {
+            return View("~/Views/Home/Dashboard_New.cshtml");
+        }
+ 
+    }
 }

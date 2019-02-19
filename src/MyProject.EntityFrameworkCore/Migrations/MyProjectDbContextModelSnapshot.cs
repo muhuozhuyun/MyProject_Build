@@ -850,6 +850,106 @@ namespace MyProject.Migrations
                     b.ToTable("AbpOrganizationUnits");
                 });
 
+            modelBuilder.Entity("MyProject.Authorization.Permissions.Permission", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Code")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<string>("FullCode")
+                        .IsRequired()
+                        .HasMaxLength(64);
+
+                    b.Property<string>("Icon")
+                        .HasMaxLength(256);
+
+                    b.Property<int>("Index");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(32);
+
+                    b.Property<string>("Note")
+                        .HasMaxLength(256);
+
+                    b.Property<int?>("ParentId");
+
+                    b.Property<string>("TreeIndex")
+                        .HasMaxLength(64);
+
+                    b.Property<int>("Type");
+
+                    b.Property<string>("Url")
+                        .HasMaxLength(256);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ParentId");
+
+                    b.ToTable("Permissions");
+                });
+
+            modelBuilder.Entity("MyProject.Authorization.Permissions.PermissionSetting", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<int?>("Index");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(32);
+
+                    b.Property<string>("PermissionCode");
+
+                    b.Property<int>("PermissionId");
+
+                    b.Property<int?>("ProjectId");
+
+                    b.Property<int?>("RoleId");
+
+                    b.Property<string>("Url")
+                        .HasMaxLength(256);
+
+                    b.Property<long?>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PermissionId");
+
+                    b.HasIndex("RoleId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("PermissionSettings");
+                });
+
             modelBuilder.Entity("MyProject.Authorization.Roles.Role", b =>
                 {
                     b.Property<int>("Id")
@@ -979,6 +1079,8 @@ namespace MyProject.Migrations
 
                     b.Property<string>("PhoneNumber")
                         .HasMaxLength(32);
+
+                    b.Property<int?>("ProjectId");
 
                     b.Property<string>("SecurityStamp")
                         .HasMaxLength(128);
@@ -1196,6 +1298,29 @@ namespace MyProject.Migrations
                     b.HasOne("Abp.Organizations.OrganizationUnit", "Parent")
                         .WithMany("Children")
                         .HasForeignKey("ParentId");
+                });
+
+            modelBuilder.Entity("MyProject.Authorization.Permissions.Permission", b =>
+                {
+                    b.HasOne("MyProject.Authorization.Permissions.Permission", "Parent")
+                        .WithMany("Children")
+                        .HasForeignKey("ParentId");
+                });
+
+            modelBuilder.Entity("MyProject.Authorization.Permissions.PermissionSetting", b =>
+                {
+                    b.HasOne("MyProject.Authorization.Permissions.Permission", "Permission")
+                        .WithMany()
+                        .HasForeignKey("PermissionId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("MyProject.Authorization.Roles.Role", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId");
+
+                    b.HasOne("MyProject.Authorization.Users.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("MyProject.Authorization.Roles.Role", b =>
